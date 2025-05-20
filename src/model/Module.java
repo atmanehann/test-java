@@ -9,14 +9,14 @@ public class Module {
 
 		Module module1 = new Module("java", "tcp", "linux");
 		Module module2 = new Module("python", "ip", "windows");
-
-		System.out.println("module1:" + module1);
-		System.out.println("module2:" + module2);
+		Module module3 = new Module();
+//		System.out.println("module1:" + module1);
+//		System.out.println("module2:" + module2);
 
 		// appel de la methode
 		module1.affichageInfoModule();
 		module2.affichageInfoModule();
-
+		module3.affichageInfoModule();
 	}
 
 	public Module(String developpement, String reseau, String systeme) {
@@ -24,7 +24,18 @@ public class Module {
 		this.developpement = developpement;
 		this.reseau = reseau;
 		this.systeme = systeme;
+		
 	}
+	
+	
+
+	//CONSTRUCTEUR SANS PARAMETRE
+	public Module() {
+		super();
+		
+	}
+
+
 
 	private String developpement;
 	private String reseau;
@@ -59,9 +70,11 @@ public class Module {
 		System.out.println("Développement: " + this.developpement);
 		System.out.println("Réseau: " + this.reseau);
 		System.out.println("Système: " + this.systeme);
+	
 	}
 
 	public String toString() {
 		return "Module [developpement=" + developpement + ", reseau=" + reseau + ", systeme=" + systeme + "]";
 	}
+	
 }
