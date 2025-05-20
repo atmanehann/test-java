@@ -1,17 +1,34 @@
 package model;
 
-import java.util.Date;
-
 public class Module {
 	public static void main(String[] args) {
 		// Déclaration et initialisation des variables
 
+		// System.out.println("reseau:" +);
+		// System.out.println("systeme:" +);
+
+		Module module1 = new Module("java", "tcp", "linux");
+		Module module2 = new Module("python", "ip", "windows");
+
+		System.out.println("module1:" + module1);
+		System.out.println("module2:" + module2);
+
+		// appel de la methode
+		module1.affichageInfoModule();
+		module2.affichageInfoModule();
+
 	}
 
-	String developpement;
-	String reseau;
-	String systeme;
-	Date date_de_naissance;
+	public Module(String developpement, String reseau, String systeme) {
+		super();
+		this.developpement = developpement;
+		this.reseau = reseau;
+		this.systeme = systeme;
+	}
+
+	private String developpement;
+	private String reseau;
+	private String systeme;
 
 	public String getDeveloppement() {
 		return developpement;
@@ -37,12 +54,14 @@ public class Module {
 		this.systeme = systeme;
 	}
 
-	public Date getDate_de_naissance() {
-		return date_de_naissance;
+	public void affichageInfoModule() {
+		System.out.println("Informations du module:");
+		System.out.println("Développement: " + this.developpement);
+		System.out.println("Réseau: " + this.reseau);
+		System.out.println("Système: " + this.systeme);
 	}
 
-	public void setDate_de_naissance(Date date_de_naissance) {
-		this.date_de_naissance = date_de_naissance;
+	public String toString() {
+		return "Module [developpement=" + developpement + ", reseau=" + reseau + ", systeme=" + systeme + "]";
 	}
-
 }
