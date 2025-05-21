@@ -76,5 +76,4 @@ public class Module {
 	public String toString() {
 		return "Module [developpement=" + developpement + ", reseau=" + reseau + ", systeme=" + systeme + "]";
 	}
-	
-}
+}																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					
